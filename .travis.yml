@@ -1,0 +1,19 @@
+os: linux
+dist: focal
+
+language: node_js
+node_js:
+  - 14.15.4
+
+install:
+  - npm install
+
+script:
+  - npm run electron:build
+
+notifications:
+    email:
+        recipients:
+            - 1586616064@qq.com
+        on_success: always
+        on_failure: always
