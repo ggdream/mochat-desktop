@@ -1,7 +1,9 @@
 {
   "name": "mochat",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
+  "homepage": "https://github.com/ggdream/mochat-desktop",
+  "author": "mocaraka <gerydorain@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
