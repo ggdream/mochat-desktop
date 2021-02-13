@@ -1,4 +1,4 @@
-
+/* eslint-disable @typescript-eslint/camelcase */
 const TerserPlugin = require('terser-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 
@@ -8,7 +8,7 @@ module.exports = {
     'vuetify'
   ],
   productionSourceMap: false,
-  configureWebpack: config => {
+  configureWebpack: () => {
     if (process.env.NODE_ENV === 'production') {
       return {
         plugins: [
@@ -45,8 +45,7 @@ module.exports = {
           to: './'
         },
         linux: {
-          target: ['deb'],
-          icon: ''
+          target: ['deb']
         }
       }
     }
