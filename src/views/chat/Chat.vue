@@ -12,7 +12,7 @@
             </ul>
         </div>
         <div class="sender">
-            <typing @notice="sendMsgToRomote" />
+            <typing @notice="sendMsgToRomote" @file="sendFileToRemote" />
         </div>
     </div>
 </template>
@@ -55,7 +55,20 @@ export default Vue.extend({
     },
     methods: {
         sendMsgToRomote(data: string): void {
-            console.log(data);
+            if (data === null || data === '') return
+            const temp = {
+                    id: this.chats.length,
+                    avatar: require('@/assets/avatar.jpg'),
+                    username: this.chats.length.toString(),
+                    message: data
+                }
+            this.chats.push(temp)
+        },
+        sendFileToRemote(form: FormData) {
+            fetch('', {
+                method: "POST",
+                body: form
+            }).then(res => res.json()).then(res => {console.log(res)})
         }
     }
 })
@@ -70,6 +83,7 @@ export default Vue.extend({
 
     .chat {
         .sender {
+            margin: 0 30px 16px;
             position: fixed;
             bottom: 0;
             left: 0;

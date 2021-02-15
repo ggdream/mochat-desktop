@@ -11,7 +11,10 @@
             <a
                 href="javascript:void(0)"
                 >
-                <img class="icon" src="@/assets/addition/file.svg" alt="">
+                <label>
+                    <input type="file" @change="getFile">
+                    <img class="icon" src="@/assets/addition/file.svg" alt="">
+                </label>
             </a>
         </div>
 
@@ -38,8 +41,16 @@ export default Vue.extend({
     },
     methods: {
         sendMsg(): void {
-            this.$emit('notice', this.text)
+            this.$emit('notice', this.text)            
             this.text = ''
+        },
+        getFile(e: Event): void {
+            const files = (e.target as HTMLInputElement).files
+            if (files === null) return
+
+            const form = new FormData()
+            form.append('file', files[0])
+            this.$emit('file', form)
         }
     }
 })
@@ -68,8 +79,14 @@ export default Vue.extend({
         .addition {
             .icon {
                 width: 24px;
-                margin: 12px 2px;
+                margin: 12px 8px;
                 vertical-align: middle;
+            }
+            input[type="file"] {
+                // position: absolute;
+                // width: 24px;
+                // opacity: 0;
+                display: none;
             }
         }
 
@@ -77,11 +94,14 @@ export default Vue.extend({
             width: 48px;
             height: 48px;
             border-radius: 8px;
-            background-color: #00a389;
+            background-color: #B39DDB;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 20px;
+            &:hover {
+                background-color: #5C6BC0;
+            }
         }
     }
 </style>

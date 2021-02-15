@@ -4,7 +4,7 @@
         :style="{flexDirection: meta.me ? 'row' : 'row-reverse'}"
         >
         <avatar :src="meta.avatar" class="avatar" />
-        <bubble class="bubble" message="你好，魔咔啦咔！！" />
+        <bubble class="bubble" :message="meta.message" />
     </div>
 </template>
 

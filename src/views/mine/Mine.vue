@@ -17,5 +17,9 @@ export default Vue.extend({
 </script>
 
 <style lang='scss' scoped>
-
+  .mine {
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+  }
 </style>
