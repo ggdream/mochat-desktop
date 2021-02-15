@@ -81,6 +81,7 @@ export default Vue.extend({
                 width: 24px;
                 margin: 12px 8px;
                 vertical-align: middle;
+                cursor: pointer;
             }
             input[type="file"] {
                 // position: absolute;
@@ -91,8 +92,7 @@ export default Vue.extend({
         }
 
         .send {
-            width: 48px;
-            height: 48px;
+            padding: 10px;
             border-radius: 8px;
             background-color: #B39DDB;
             display: flex;

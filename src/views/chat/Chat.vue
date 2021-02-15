@@ -68,7 +68,7 @@ export default Vue.extend({
             fetch('', {
                 method: "POST",
                 body: form
-            }).then(res => res.json()).then(res => {console.log(res)})
+            }).then(res => res.json()).then(res => {console.log(res)}).catch(err => {console.log(err)})
         }
     }
 })
@@ -79,9 +79,19 @@ export default Vue.extend({
         margin: 0;
         padding: 0;
         list-style: none;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .chat {
+        height: 100%;
+        .shower {
+            height: 72%;
+            ul {
+                height: 100%;
+            }
+        }
+
         .sender {
             margin: 0 30px 16px;
             position: fixed;
