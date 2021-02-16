@@ -1,6 +1,6 @@
 {
   "name": "mochat",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": true,
   "homepage": "https://github.com/ggdream/mochat-desktop",
   "author": "mocaraka <gerydorain@gmail.com>",
@@ -13,7 +13,7 @@
     "preinstall": "npm i -D electron",
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps",
-    "tag": "git tag v0.0.7 && git push --tags"
+    "tag": "git tag v0.0.8 && git push --tags"
   },
   "main": "background.js",
   "dependencies": {

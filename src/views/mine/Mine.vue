@@ -12,6 +12,20 @@ export default Vue.extend({
     name: 'Mine',
     components: {
         Chat
+    },
+    data(){
+        return {
+            show: true,
+            from: '',
+            to: ''
+        }
+    },
+    methods: {
+        submit() {
+            if (this.from && this.to) {
+                this.show = false
+            }
+        }
     }
 })
 </script>

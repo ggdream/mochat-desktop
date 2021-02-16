@@ -13,7 +13,7 @@ import Vue from 'vue'
 import Avatar from './Avatar.vue'
 import Bubble from './Bubble.vue'
 
-interface CupMeta {
+export interface CupMeta {
     id: string;         // 唯一识别号 v-for -> key
     me: boolean;        // 是否是自己
     avatar: string;     // 头像地址
