@@ -4,7 +4,11 @@ import { RouteConfig } from 'vue-router'
 const routes: Array<RouteConfig> = [
     {
         path: '/',
-        redirect: '/mine',
+        redirect: '/sign',
+    },
+    {
+        path: '/sign',
+        component: () => import('@/views/sign/index.vue')
     },
     {
         path: '/mine',

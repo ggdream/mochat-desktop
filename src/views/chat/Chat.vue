@@ -27,7 +27,7 @@
 
 <script lang='ts'>
 import Vue from 'vue'
-import Cup, {CupMeta} from './Cup.vue'
+import Cup,{CupMeta} from './Cup.vue'
 import Typing from './Typing.vue'
 
 export default Vue.extend({

@@ -15,7 +15,5 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-  html, body {
-    overflow: hidden !important;
-  }
+    @import '@/assets/scss/set.scss';
 </style>
